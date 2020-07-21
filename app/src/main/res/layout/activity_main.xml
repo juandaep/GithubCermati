@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    tools:context=".MainActivity">
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/recyclerView"
+        android:layout_below="@+id/toolbar"
+        tools:context=".controller.MainActivity"
+        tools:showIn="@layout/activity_main" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/disconnected"
+        android:text="@string/network"
+        android:textStyle="bold"
+        android:textSize="30sp"/>
+
+
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?actionBarSize"
+        android:id="@+id/toolbar"
+        android:background="?colorPrimary"/>
+
+    <com.miguelcatalan.materialsearchview.MaterialSearchView
+        android:layout_height="wrap_content"
+        android:layout_width="match_parent"
+        android:id="@+id/searchView"
+        app:searchBackground="?colorPrimary"
+        app:searchBackIcon="@drawable/ic_action_navigation_arrow_back_inverted"
+        app:searchCloseIcon="@drawable/ic_action_navigation_close_inverted"
+        app:searchSuggestionIcon="@drawable/ic_suggestion"
+        android:textColor="#fff"
+        android:textColorHint="#fff"/>
+
+
+</RelativeLayout>
